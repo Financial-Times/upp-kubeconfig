@@ -15,7 +15,7 @@ This repo contains:
 1. Download the attachments from the secure notes, and unzip them into in the EU and US credentials directories.
     1. To download attachments, you need to install [LP binary plugin](https://lastpass.com/support.php?cmd=showfaq&id=3206) and access the vault through the add-on/extension.
 1. Set the environment variable `KUBECONFIG` to point to the path of the file:
-    1. `export KUBECONFIG=~/k8s-aws-delivery-poc/kubeconfig`
+    1. `export KUBECONFIG=~/upp-kubeconfig/kubeconfig`
 1. Set your context:
     1. `kubectl config use-context upp-prod-delivery-eu`
 
