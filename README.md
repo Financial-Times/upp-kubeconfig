@@ -64,7 +64,7 @@ kubectl config use-context upp-prod-publish-us
 If you're switching between clusters regularly, you may want to show the current context in your shell prompt.
 
 See here for examples:  
-https://pracucci.com/display-the-current-kubelet-context-in-the-bash-prompt.html  
-https://github.com/eyalev/kubectl-context-prompt  
-http://blog.cloud66.com/kubernetes-and-gcloud-bash-prompts/  
+- https://pracucci.com/display-the-current-kubelet-context-in-the-bash-prompt.html  
+- https://github.com/eyalev/kubectl-context-prompt  
+- http://blog.cloud66.com/kubernetes-and-gcloud-bash-prompts/  
 
