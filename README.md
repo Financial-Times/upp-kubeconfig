@@ -6,18 +6,28 @@ This repo contains:
 - skeleton credentials directories for EU and US clusters
 - instructions on how to connect and switch clusters
 
-## Accessing k8s clusters
+## Install kubectl
+Instructions are [here](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
+For MacOS users, [installing kubectl via Homebrew](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-homebrew-on-macos) is preferred.
+
+## First time configuration
 1. Clone this repository
 1. Go to lastpass and search for the following secure notes:
-    1. UPP - k8s Prod EU Delivery, Publishing & Neo4j Login credentials
-    1. UPP - k8s Prod US Delivery, Publishing & Neo4J Login credentials
+    - UPP - k8s Prod EU Delivery, Publishing & Neo4j Login credentials
+    - UPP - k8s Prod US Delivery, Publishing & Neo4J Login credentials
 1. Download the attachments from the secure notes, and unzip them into in the EU and US credentials directories.
-    1. To download attachments, you need to install [LP binary plugin](https://lastpass.com/support.php?cmd=showfaq&id=3206) and access the vault through the add-on/extension.
-1. Set the environment variable `KUBECONFIG` to point to the path of the file:
-    1. `export KUBECONFIG=~/upp-kubeconfig/kubeconfig`
-1. Set your context:
-    1. `kubectl config use-context upp-prod-delivery-eu`
+    - To download attachments, you need to install [LP binary plugin](https://lastpass.com/support.php?cmd=showfaq&id=3206) and access the vault through the add-on/extension.
+1. Create a `.kube` directory in your home, if it doesn't already exist:
+    `mkdir -p ~/.kube`
+1. Copy the config & credentials into your `.kube` directory:
+    `cp -r config credentials-* ~/.kube`
+
+## Accessing k8s clusters
+Set your context to the appropriate cluster:
+```
+kubectl config use-context upp-prod-delivery-eu
+```
 
 Available clusters are:
 ```
@@ -44,3 +54,17 @@ KubeDNS is running at https://upp-prod-delivery-eu-api.ft.com/api/v1/namespaces/
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 $
 ```
+
+To switch to a different cluster, re-run the use-context command:
+```
+kubectl config use-context upp-prod-publish-us
+```
+
+## [OPTIONAL] Display the current context in your shell prompt
+If you're switching between clusters regularly, you may want to show the current context in your shell prompt.
+
+See here for examples:
+https://pracucci.com/display-the-current-kubelet-context-in-the-bash-prompt.html
+https://github.com/eyalev/kubectl-context-prompt
+http://blog.cloud66.com/kubernetes-and-gcloud-bash-prompts/
+
