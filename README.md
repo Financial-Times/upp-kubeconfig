@@ -18,9 +18,9 @@ For MacOS users, [installing kubectl via Homebrew](https://kubernetes.io/docs/ta
     - UPP - k8s Prod US Delivery, Publishing & Neo4J Login credentials
 1. Download the attachments from the secure notes, and unzip them into in the EU and US credentials directories.
     - To download attachments, you need to install [LP binary plugin](https://lastpass.com/support.php?cmd=showfaq&id=3206) and access the vault through the add-on/extension.
-1. Create a `.kube` directory in your home, if it doesn't already exist:
+1. Create a `.kube` directory in your home, if it doesn't already exist:  
     `mkdir -p ~/.kube`
-1. Copy the config & credentials into your `.kube` directory:
+1. Copy the config & credentials into your `.kube` directory:  
     `cp -r config credentials-* ~/.kube`
 
 ## Accessing k8s clusters
@@ -64,7 +64,7 @@ kubectl config use-context upp-prod-publish-us
 If you're switching between clusters regularly, you may want to show the current context in your shell prompt.
 
 See here for examples:
-https://pracucci.com/display-the-current-kubelet-context-in-the-bash-prompt.html
-https://github.com/eyalev/kubectl-context-prompt
-http://blog.cloud66.com/kubernetes-and-gcloud-bash-prompts/
+https://pracucci.com/display-the-current-kubelet-context-in-the-bash-prompt.html  
+https://github.com/eyalev/kubectl-context-prompt  
+http://blog.cloud66.com/kubernetes-and-gcloud-bash-prompts/  
 
