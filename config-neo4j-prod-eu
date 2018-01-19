@@ -1,0 +1,20 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: credentials-prod-eu/ca.pem
+    server: https://upp-prod-neo4j-eu-api.ft.com
+  name: upp-prod-neo4j-eu
+contexts:
+- context:
+    cluster: upp-prod-neo4j-eu
+    namespace: default
+    user: upp-prod-eu-admin
+  name: upp-prod-neo4j-eu
+current-context: upp-prod-neo4j-eu
+kind: Config
+preferences: {}
+users:
+- name: upp-prod-eu-admin
+  user:
+    client-certificate: credentials-prod-eu/admin.pem
+    client-key: credentials-prod-eu/admin-key.pem
