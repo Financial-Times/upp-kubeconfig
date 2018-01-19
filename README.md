@@ -1,5 +1,8 @@
 # UPP kubeconfig
 
+## WORK IN PROGRESS
+This repo / document is not final. The instructions probably won't work right now, until I've finished off the config structure and some other bits.
+
 ## Description
 This repo contains:
 - a multi-context kubeconfig file for connecting to UPP Kubernetes clusters
