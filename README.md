@@ -20,11 +20,11 @@ For MacOS users, [installing kubectl via Homebrew](https://kubernetes.io/docs/ta
 1. Download the attachments from the secure notes, and unzip them into in the EU and US credentials directories.
     - To download attachments, you need to install [LP binary plugin](https://lastpass.com/support.php?cmd=showfaq&id=3206) and access the vault through the add-on/extension.
 1. Create a `.kube` directory in your home, if it doesn't already exist:  
-    `mkdir -p ~/.kube`
+    - `mkdir -p ~/.kube`
 1. Unzip the content of the downloaded lastpass note (ft-credentials.zip) into the newly created ~/.kube directory:
-    `cd ~/.kube; unzip ~/Downloads/ft-credentials.zip`
+    - `cd ~/.kube; unzip ~/Downloads/ft-credentials.zip`
 1. Rename ft-kubeconfig to config
-   `mv ft-kubeconfig config`
+    - `mv ft-kubeconfig config`
 
 ## Accessing k8s clusters
 Set your context to the appropriate cluster:
