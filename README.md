@@ -1,7 +1,7 @@
 # UPP kubeconfig
 
-## WORK IN PROGRESS
-This repo / document is not final. The instructions probably won't work right now, until I've finished off the config structure and some other bits.
+## Where is this used
+This is used by the `coco-jumpoff` box that DutyOps uses.
 
 ## Description
 This repo contains:
