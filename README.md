@@ -17,8 +17,8 @@ For MacOS users, [installing kubectl via Homebrew](https://kubernetes.io/docs/ta
 ## First time configuration
 1. Clone this repository
 1. Go to lastpass and search for the following secure notes:
-    - UPP - k8s Prod EU Delivery, Publishing & Neo4j Login credentials
-    - UPP - k8s Prod US Delivery, Publishing & Neo4J Login credentials
+    - UPP - k8s Prod EU Delivery, Publishing Login credentials
+    - UPP - k8s Prod US Delivery, Publishing Login credentials
 1. Download the attachments from the secure notes, and unzip them into in the EU and US credentials directories.
     - To download attachments, you need to install [LP binary plugin](https://lastpass.com/support.php?cmd=showfaq&id=3206) and access the vault through the add-on/extension.
 1. Create a `.kube` directory in your home, if it doesn't already exist:  
@@ -36,10 +36,8 @@ Available clusters are:
 ```
 upp-prod-delivery-eu
 upp-prod-publish-eu
-upp-prod-neo4j-eu
 upp-prod-delivery-us
 upp-prod-publish-us
-upp-prod-neo4j-us
 ```
 
 Test your setup by running:
